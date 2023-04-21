@@ -1,1 +1,2 @@
 # kotlin-autotests
+mvn exec:java -Dexec.classpathScope=test -Dexec.mainClass=io.cucumber.core.cli.Main -Dexec.args="features --glue org.example.steps" -Djavaagent:"C:\Users\alexe\.m2\repository/org/aspectj/aspectjweaver/1.9.19/aspectjweaver-1.9.19.jar" -Dcucumber.plugin="io.qameta.allure.cucumber6jvm.AllureCucumber6Jvm"
