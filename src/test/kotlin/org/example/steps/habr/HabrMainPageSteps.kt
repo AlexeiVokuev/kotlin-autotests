@@ -2,13 +2,13 @@ package org.example.steps.habr
 
 import io.cucumber.java.ru.И
 import io.cucumber.java.ru.Когда
+import org.example.SeleniumEnvironment
 import org.example.pages.habr.HabrMainPage
-import org.example.steps.BasicSteps
 
 
 class HabrMainPageSteps {
 
-    private val habrMain = HabrMainPage(BasicSteps.driver)
+    private val habrMain = HabrMainPage(SeleniumEnvironment.driver)
 
     @И("пользователь открывает главную страницу Хабрахабра")
     fun goToMainPage() {

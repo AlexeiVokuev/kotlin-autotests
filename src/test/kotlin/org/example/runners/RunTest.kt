@@ -8,7 +8,7 @@ import org.junit.runner.RunWith
 @CucumberOptions(
     features = ["features"],
     glue = ["org.example.steps"],
-    tags = "@runme",
+    tags = "@ready",
     dryRun = false,
     snippets = CucumberOptions.SnippetType.UNDERSCORE
 )
