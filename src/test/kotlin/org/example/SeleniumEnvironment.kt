@@ -3,6 +3,7 @@ package org.example
 import io.qameta.allure.Step
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.chrome.ChromeDriver
+import java.io.File
 import java.io.FileWriter
 import java.io.IOException
 import java.util.concurrent.TimeUnit
@@ -21,6 +22,7 @@ object SeleniumEnvironment {
 
         //todo test for env in allure report
         try {
+            File("allure-results").mkdirs()
             FileWriter("allure-results\\environment.properties", true).use { writer ->
                 writer.write("Browser=Chrome\n\rVersion=${(driver as ChromeDriver).capabilities?.browserVersion}")
                 writer.flush()
