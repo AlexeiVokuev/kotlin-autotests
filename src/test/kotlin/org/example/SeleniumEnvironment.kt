@@ -21,7 +21,7 @@ object SeleniumEnvironment {
 
         //todo test for env in allure report
         try {
-            FileWriter("allure-results/environment.properties", true).use { writer ->
+            FileWriter("allure-results\\environment.properties", true).use { writer ->
                 writer.write("Browser=Chrome\n\rVersion=${(driver as ChromeDriver).capabilities?.browserVersion}")
                 writer.flush()
                 writer.close()
