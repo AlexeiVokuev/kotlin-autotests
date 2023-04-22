@@ -32,7 +32,9 @@ object BasicSteps {
     @JvmStatic
     @After
     fun down(sc:Scenario): Unit {
+        Allure.step("Завершение теста")
         if(sc.isFailed)
+            Allure.step("Save Screenshot")
             makeScreenshotOnFailure().inputStream().use {
                     `is` -> Allure.addAttachment("screen_${sc.id}","image/png", `is`, "png")
             }

@@ -4,11 +4,11 @@ import io.cucumber.java.ru.И
 import io.cucumber.java.ru.Когда
 import io.cucumber.java.ru.То
 import io.cucumber.java.ru.Тогда
+import org.example.SeleniumEnvironment.driver
 import org.example.pages.ya.MainPage
-import org.example.steps.BasicSteps
 
 class MainPageSteps {
-    private val mainPage = MainPage(BasicSteps.driver)
+    private val mainPage = MainPage(driver)
     @Когда("пользователь открывает главную страницу Яндекс$")
     fun goToMainPage() {
         mainPage.goToMainPage()

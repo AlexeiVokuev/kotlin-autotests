@@ -2,11 +2,11 @@ package org.example.steps.ya
 
 import io.cucumber.java.ru.И
 import io.cucumber.java.ru.Тогда
+import org.example.SeleniumEnvironment.driver
 import org.example.pages.ya.MailBoxPage
-import org.example.steps.BasicSteps
 
 class MailBoxPageSteps {
-    private val mailBoxPage = MailBoxPage(BasicSteps.driver)
+    private val mailBoxPage = MailBoxPage(driver)
     @И("выйти из почты Яндекс$")
     fun logOut() {
         mailBoxPage.logOut()
